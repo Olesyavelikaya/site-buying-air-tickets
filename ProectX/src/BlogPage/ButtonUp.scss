@@ -1,0 +1,29 @@
+@media (max-width: 1023px) {
+  .buttonUp {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 1024px) {
+  .buttonUp {
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .buttonUp {
+    margin-right: 25px;
+  }
+}
+
+@media (min-width: 1495px) {
+  .buttonUp {
+    margin-right: 45px;
+  }
+}
+
+.buttonUp {
+  float: right;
+  position: sticky;
+  bottom: 50px;
+}

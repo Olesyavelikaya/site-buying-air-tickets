@@ -1,0 +1,70 @@
+@media (max-width: 380px) {
+  .container-information_flight {
+    img {
+      visibility: hidden;
+    }
+  }
+
+  .container-city_from {
+    padding-right: 10px;
+  }
+  .container-city_where {
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: 381px) {
+  .container-city_from {
+    padding-right: 30px;
+  }
+
+  .container-city_where {
+    padding-left: 30px;
+  }
+}
+
+.main-container_card-ticket {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 70px;
+    height: 70px;
+  }
+
+  p {
+    font-weight: 400;
+  }
+}
+
+.card {
+  width: calc(100% - 1px);
+  height: 700px;
+  margin-bottom: 15px;
+  max-width: 700px;
+}
+
+.container-city_from,
+.container-city_where {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-city_from {
+  border-right: 1px solid black;
+  gap: 30px;
+}
+
+.container-city_where {
+  border-left: 1px solid black;
+}
+
+.price-travel {
+  padding-top: 10px;
+}
+
+.link-ticket {
+  text-decoration: none;
+  color: var(--white);
+}

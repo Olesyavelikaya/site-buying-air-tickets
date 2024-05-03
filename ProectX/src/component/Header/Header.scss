@@ -1,0 +1,106 @@
+.container-bg {
+  background-image: url("/foto/bg-header.jpeg");
+  background-size: 100% 100%;
+  opacity: 0.8;
+
+  h2 {
+    color: white;
+  }
+}
+
+@media (min-width: 320px) {
+  .main-container_header {
+    height: 550px;
+
+    .container-bg {
+      height: 450px;
+    }
+
+    h2 {
+      margin-left: 10px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .quote {
+      margin-top: 50px;
+    }
+    .quote-bottom {
+      margin-left: 50px;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .main-container_header {
+    height: 650px;
+
+    .container-bg {
+      height: 550px;
+    }
+
+    h2 {
+      margin-left: 30px;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .quote {
+      margin-top: 50px;
+    }
+    .quote-bottom {
+      margin-left: 150px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-container_header {
+    height: 750px;
+
+    .container-bg {
+      height: 650px;
+    }
+    h2 {
+      margin-left: 70px;
+      font-size: 50px;
+      font-weight: bold;
+    }
+    .quote-bottom {
+      margin-left: 200px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    margin-left: 90px;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .quote {
+    margin-top: 100px;
+  }
+  .quote-bottom {
+    margin-left: 300px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main-container_header {
+    height: 950px;
+
+    .container-bg {
+      height: 850px;
+    }
+    h2 {
+      margin-left: 100px;
+      font-size: 80px;
+      font-weight: bold;
+    }
+    .quote {
+      margin-top: 100px;
+    }
+    .quote-bottom {
+      margin-left: 500px;
+    }
+  }
+}

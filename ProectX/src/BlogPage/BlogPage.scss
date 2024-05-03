@@ -1,0 +1,58 @@
+@media (max-width: 768px) {
+  .main-container_pageBlog {
+    font-size: 18px;
+
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .main-container_pageBlog {
+    font-size: 21px;
+
+    h1 {
+      font-size: 55px;
+    }
+  }
+}
+
+.main-container_pageBlog {
+  li {
+    list-style-type: none;
+  }
+  h6 {
+    font-size: 22px;
+    margin: 15px;
+    font-weight: 600;
+  }
+  h4 {
+    margin: 20px 0;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  h5 {
+    font-weight: 600;
+  }
+}
+
+.container-bg-navbar {
+  background-color: var(--dark-grey);
+  margin-bottom: 50px;
+}
+
+.img-pageBlog {
+  width: calc(100% - 10px);
+  height: 100%;
+  max-height: 512px;
+  max-width: 768px;
+}
+
+.img-pageAmsterdam {
+  margin-bottom: 30px;
+}

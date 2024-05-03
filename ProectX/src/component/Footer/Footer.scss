@@ -1,0 +1,33 @@
+.main-container_footer {
+  padding: 40px 0;
+  text-align: center;
+
+  a,
+  p {
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--black);
+  }
+}
+
+@media (min-width: 475px) {
+  .container-list_footer {
+    justify-content: center;
+    padding: 40px;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 474px) {
+  .container-list_footer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+.container-list_footer {
+  display: flex;
+  text-align: center;
+}

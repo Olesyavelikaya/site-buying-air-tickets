@@ -1,0 +1,9 @@
+/* @import "./style/normaliz.css"; */
+@import "./style/color.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
