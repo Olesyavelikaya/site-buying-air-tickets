@@ -25,7 +25,7 @@ function FormSearchTikets() {
   const establishedCity = useSelector(selectCity);
 
   const handleChangeCityIsFrom = (
-    event: React.ChangeEvent<HTMLInputElement>
+    event: React.ChangeEvent<HTMLInputElement>,
   ) => {
     if (dispatch(setCityIsWhereFrom(event.target.value))) {
       dispatch(setCityIsWhereFrom(event.target.value));
@@ -41,33 +41,37 @@ function FormSearchTikets() {
   };
 
   const handleChangeDepartData = (
-    event: React.ChangeEvent<HTMLInputElement>
+    event: React.ChangeEvent<HTMLInputElement>,
   ) => {
     dispatch(setDepartData(event.target.value));
+    convertingCityToCode();
   };
 
   const handleChangeReturnData = (
-    event: React.ChangeEvent<HTMLInputElement>
+    event: React.ChangeEvent<HTMLInputElement>,
   ) => {
     dispatch(setReturnData(event.target.value));
+    convertingCityToCode();
   };
 
-  const onSumbitCity = (event: React.FormEvent<HTMLFormElement>) => {
+  const onSumbitSearchCity = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    dispatch(
-      fetchDefinitionCodeCity({
-        cityisFrom: establishedCity.cityIsWhereFrom,
-        cityisWhere: establishedCity.cytiIsWhere,
-      })
-    );
-
     dispatch(
       fetchSearchTickets({
         codeCityIsFrom: establishedCity.codeCityIsWhereFrom,
         codeCityIsWhere: establishedCity.codeCytiIsWhere,
         departDate: currentData.departDate,
         returnData: currentData.returnDate,
-      })
+      }),
+    );
+  };
+
+  const convertingCityToCode = () => {
+    dispatch(
+      fetchDefinitionCodeCity({
+        cityisFrom: establishedCity.cityIsWhereFrom,
+        cityisWhere: establishedCity.cytiIsWhere,
+      }),
     );
   };
 
@@ -78,7 +82,7 @@ function FormSearchTikets() {
 
   return (
     <>
-      <Form onSubmit={onSumbitCity}>
+      <Form onSubmit={onSumbitSearchCity}>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridTextWhere1">
             <Form.Label>Откуда</Form.Label>
