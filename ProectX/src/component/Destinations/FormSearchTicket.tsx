@@ -75,6 +75,7 @@ function FormSearchTikets() {
     );
   };
 
+
   const onClickResetForm = () => {
     dispatch(resetSearch());
     dispatch(resetCity());
