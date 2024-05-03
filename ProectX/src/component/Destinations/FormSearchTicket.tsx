@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -20,14 +20,12 @@ import { fetchSearchTickets } from "../../context/searchTicketsRequest";
 import "./Destinations.scss";
 
 function FormSearchTikets() {
-  const [disabledButton, setDisabled] = useState(true);
-
   const dispatch = useDispatch<AppDispatch>();
   const currentData = useSelector(selectSearchTicket);
   const establishedCity = useSelector(selectCity);
 
   const handleChangeCityIsFrom = (
-    event: React.ChangeEvent<HTMLInputElement>,
+    event: React.ChangeEvent<HTMLInputElement>
   ) => {
     if (dispatch(setCityIsWhereFrom(event.target.value))) {
       dispatch(setCityIsWhereFrom(event.target.value));
@@ -43,14 +41,13 @@ function FormSearchTikets() {
   };
 
   const handleChangeDepartData = (
-    event: React.ChangeEvent<HTMLInputElement>,
+    event: React.ChangeEvent<HTMLInputElement>
   ) => {
     dispatch(setDepartData(event.target.value));
-    btnDisabled();
   };
 
   const handleChangeReturnData = (
-    event: React.ChangeEvent<HTMLInputElement>,
+    event: React.ChangeEvent<HTMLInputElement>
   ) => {
     dispatch(setReturnData(event.target.value));
   };
@@ -61,7 +58,7 @@ function FormSearchTikets() {
       fetchDefinitionCodeCity({
         cityisFrom: establishedCity.cityIsWhereFrom,
         cityisWhere: establishedCity.cytiIsWhere,
-      }),
+      })
     );
 
     dispatch(
@@ -70,22 +67,13 @@ function FormSearchTikets() {
         codeCityIsWhere: establishedCity.codeCytiIsWhere,
         departDate: currentData.departDate,
         returnData: currentData.returnDate,
-      }),
+      })
     );
   };
 
   const onClickResetForm = () => {
     dispatch(resetSearch());
     dispatch(resetCity());
-    setDisabled(true);
-  };
-
-  const btnDisabled = () => {
-    establishedCity.cityIsWhereFrom.length &&
-    establishedCity.cytiIsWhere.length &&
-    currentData.departDate?.length === 0
-      ? setDisabled(true)
-      : setDisabled(false);
   };
 
   return (
@@ -137,7 +125,6 @@ function FormSearchTikets() {
           variant="outline-dark"
           type="submit"
           className="button-search_tikets"
-          disabled={disabledButton}
         >
           Найти билеты
         </Button>
