@@ -7,6 +7,7 @@ import { Destinations } from "../component/Destinations/Destinations";
 import { Blog } from "../component/Blog/Blog";
 import { Company } from "../component/Company/Company";
 import { Footer } from "../component/Footer/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Destinations />
       </Link>
       <Footer />
+      <SpeedInsights />
     </>
   );
 }

@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider} from "react-router-dom";
+import { Provider } from "react-redux";
 import App from "./App/App.tsx";
+import { store } from "./context/context.tsx";
 import ErrorPage from "./router/ErrorPage.tsx";
 import { PageBali } from "./BlogPage/PageBali.tsx";
 import { PageLondon } from "./BlogPage/PageLondon.tsx";
@@ -9,8 +11,7 @@ import { PageAmsterdam } from "./BlogPage/PageAmsterdam.tsx";
 import { PageEurope } from "./BlogPage/PageEurope.tsx";
 import { PageTicketSearch } from "./component/Destinations/PageTicketSearch.tsx";
 import "./index.css";
-import { store } from "./context/context.tsx";
-import { Provider } from "react-redux";
+
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
   },
-  { path: "PageBali", element: <PageBali /> },
+   { path: "PageBali", element: <PageBali /> },
   { path: "PageLondon", element: <PageLondon /> },
   { path: "PageAmsterdam", element: <PageAmsterdam /> },
   { path: "PageEurope", element: <PageEurope /> },
