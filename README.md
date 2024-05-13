@@ -1,4 +1,4 @@
-# Сайт по поиску авиабилетов
+# Сайт для поиска авиабилетов
 
 
 ### [DEPLOY](https://site-buying-air-tickets-github-io.vercel.app/)
